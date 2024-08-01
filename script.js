@@ -7,7 +7,6 @@ document.querySelector(".busca").addEventListener("submit", async (event) => {
     if (input.value.length > 0) {
         showWarning("Carregando...");
 
-        let API_key = "7a0b30c53699d7aa0bca2a59efc14ba7";
         let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${API_key}`);
         let jsonData = await req.json();
 
